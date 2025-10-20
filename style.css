@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #f7f8fa;
+}
+
+header {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px 0;
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & li {
+      list-style: none;
+
+      & a {
+        text-transform: uppercase;
+        color: #1074e6;
+        font-weight: 500;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 20px;
+
+  & h1 {
+    text-align: center;
+    color: #1074e6;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+}
+
+h2 {
+  margin: 10px 0 5px;
+  font-weight: 700;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+/* * Home */
+main.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  padding: 0 20px 20px 20px;
+}
+
+main.home ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  & li a {
+    text-decoration: none;
+    background-color: #1074e6;
+    border-radius: 50%;
+    padding: 11px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      filter: invert();
+    }
+  }
+}
+
+main.home section {
+  margin-top: 15px;
+}
+
+main.home .likes-container ul {
+  text-align: left;
+  gap: 30px;
+
+  & li {
+    list-style: none;
+    padding: 5px;
+    background-color: #1074e6;
+    border-radius: 7px;
+    color: #fff;
+  }
+}
+
+article[data-testid="test-profile-card"] {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main.home .header-container {
+  background-color: #1074e6;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+
+  & figure {
+    margin-bottom: -75px;
+    background-color: #1074e6;
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    padding: 5px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+    }
+  }
+}
+
+/* ? Contact */
+main.contact {
+  max-width: 1000px;
+  margin: 40px auto 10px auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  & small {
+    display: none;
+    color: red;
+  }
+
+  & small.success {
+    color: #4caf50;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+button {
+  position: relative;
+  display: block;
+  width: 190px;
+  line-height: 60px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #1074e6;
+  outline: none;
+  border: none;
+  margin: 0 auto;
+
+  & span {
+    position: relative;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    z-index: 1;
+  }
+
+  & .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 190px;
+    height: 200px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+
+    &::after,
+    ::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      transform: translate(-50%, -75%);
+      content: "";
+    }
+
+    &::before {
+      border-radius: 45%;
+      background: hsla(0, 0%, 100%, 0.4);
+      animation: animate 5s linear infinite;
+    }
+
+    &::after {
+      border-radius: 40%;
+      background: hsla(0, 0%, 100%, 0.1);
+      animation: animate 10s linear infinite;
+    }
+  }
+}
+
+input {
+  height: 65px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
+  color: #333;
+  font-size: 17px;
+  font-weight: 400;
+  width: 100%;
+  background: #f1f5f9;
+  border: 2px solid #1074e6;
+  outline: none;
+  transition: all 0.2s linear;
+  transition-delay: 0.1s;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    color: #2e2e36;
+    border-color: #333;
+  }
+}
+
+textarea {
+  height: 200px;
+  padding: 30px 40px;
+  margin-bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -75%) rotate(1turn);
+  }
+}
+
+/* ! About */
+
+main.about {
+  max-width: 1000px;
+  margin: 40px auto 10px auto;
+  padding: 0 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 30px 25px;
+    line-height: 1.7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    & h2,
+    h3 {
+      color: #1074e6;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    & p {
+      font-size: 1rem;
+      color: #333;
+      font-weight: 400;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+section[data-testid="test-about-bio"] {
+  border-left: 5px solid #1074e6;
+}
+
+section[data-testid="test-about-goals"] {
+  border-left: 5px solid #4caf50;
+}
+
+section[data-testid="test-about-confidence"] {
+  border-left: 5px solid #ff9800;
+}
+
+section[data-testid="test-about-future-note"] {
+  border-left: 5px solid #9c27b0;
+}
+
+section[data-testid="test-about-extra"] {
+  border-left: 5px solid #009688;
+}
+
+@media (min-width: 768px) {
+  article[data-testid="test-profile-card"] {
+    max-width: 700px;
+  }
+
+  div.info {
+    flex: 1;
+  }
+
+  /* Contact Page */
+  main.contact {
+    padding: 0 40px;
+  }
+
+  /* About Page */
+  main.about {
+    padding: 0 40px 80px 40px;
+    gap: 50px;
+
+    & section {
+      padding: 40px 35px;
+
+      &h2,
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      & p {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}

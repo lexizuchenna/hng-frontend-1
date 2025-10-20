@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HNG Stage 1 | Home</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="home">
+      <article data-testid="test-profile-card">
+        <div class="header-container">
+          <figure>
+            <img
+              src="./assets/images/148006.jpg"
+              alt="User avatar"
+              data-testid="test-user-avatar"
+            />
+          </figure>
+        </div>
+
+        <div class="info">
+          <div>
+            <h2 data-testid="test-user-name">Jane Doe</h2>
+          </div>
+
+          <p data-testid="test-user-bio">
+            Frontend developer passionate about creating accessible and
+            beautiful user interfaces.
+          </p>
+
+          <p>
+            <strong>Current Time (ms): </strong
+            ><span data-testid="test-user-time"></span>
+          </p>
+
+          <ul aria-label="Social Links" data-testid="test-user-social-links">
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <img src="./assets/images/twitter.png" alt="twitter-icon" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+              >
+                <img src="./assets/images/github.png" alt="github-icon"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                ><img src="./assets/images/linkedin.png" alt="linkedin-icon"
+              /></a>
+            </li>
+          </ul>
+
+          <div class="likes-container">
+            <section>
+              <h3>Hobbies</h3>
+              <ul data-testid="test-user-hobbies">
+                <li>Coding</li>
+                <li>Reading</li>
+                <li>Photography</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Dislikes</h3>
+              <ul data-testid="test-user-dislikes">
+                <li>Procrastination</li>
+                <li>Noise</li>
+                <li>Spam emails</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

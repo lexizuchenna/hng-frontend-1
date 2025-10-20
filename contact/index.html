@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>HNG Stage 1 | Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contact">
+      <h1>Contact Us</h1>
+
+      <form id="form" novalidate>
+        <div class="row">
+          <small class="success">Form submitted successfully</small>
+        </div>
+        <div class="row">
+          <small>Error: </small>
+          <input
+            type="text"
+            placeholder="Your name"
+            name="name"
+            data-test-id="test-contact-name"
+          />
+        </div>
+        <div class="row">
+          <small>Error: </small>
+          <input
+            type="email"
+            placeholder="Email address"
+            name="email"
+            data-test-id="test-contact-email"
+          />
+        </div>
+        <div class="row">
+          <small>Error: </small>
+          <input
+            type="text"
+            placeholder="Subject"
+            name="subject"
+            data-test-id="test-contact-subject"
+          />
+        </div>
+        <div class="row">
+          <small>Error: </small>
+          <textarea
+            placeholder="Write message"
+            name="message"
+            data-test-id="test-contact-message"
+          ></textarea>
+        </div>
+        <div class="row">
+          <div>
+            <button type="submit" data-test-id="test-contact-submit">
+              <span>Send Us Message</span><i class="liquid"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
